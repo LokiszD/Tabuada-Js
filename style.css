@@ -63,3 +63,7 @@ select.select{
     width: 200px;
     height: auto;
 }
+
+select.select option{
+    font: normal 15pt arial;
+}

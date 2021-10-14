@@ -1,14 +1,19 @@
 function tabuada(){
 
     var ntxt = window.document.getElementById('numerotxt').value
-    var n = Number(ntxt)
-    var res = window.document.getElementById('resposta')
+    var res = window.document.getElementById('tab')
     var result
 
-    res.innerHTML = '<h2>Tabuada:</h2>'
+    if (ntxt.length == 0) {
+        window.alert('[ERRO] Número inválido')
+    }else{
+        var n = Number(ntxt)
 
-    for(let i = 1; i <= 10; i++){
-        res.innerHTML += `<p>${n} x ${i} = ${n*i}</p>`
+        res.innerHTML = ''
+
+        for(let i = 1; i <= 10; i++){
+            res.innerHTML += `<option value="v${i}">${n} x ${i} = ${n*i}</option>`
+        }
     }
 
 }
